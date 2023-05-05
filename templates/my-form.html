@@ -1,0 +1,58 @@
+<!-- /templates/my-form.html-->
+
+<html>
+    <head>
+        <title>Flask Example Input Form</title>
+    </head>
+    <body>
+	    <h3>Flask|Python|Psycopg2|PostgreSQL</h3>
+
+	    <h4>Compare Years by County</h4>
+        <form action="/countysearch" method="POST">
+            <div>
+                Compare years for inputed county (use single quotes)
+                <input type="text" name="county">
+			</div>
+			<div>
+                <input type="radio" name="options" value="GHG_Emissions"> GHG Emissions </input><br>
+			</div>
+			<div>
+                <input type="radio" name="options" value="Population"> Population </input><br>
+			</div>
+			<div>
+                <input type="radio" name="options" value="EVs"> Electric Vehicles </input><br>
+            </div>
+                <input type="submit" value="Submit">
+        </form>
+
+	        <h4>Select Search</h4>
+        <form action="/selectsearch" method="POST">
+            <div>
+                Find a specific group of cells using county and year (use single quotes for county)
+                <input type="text" name="county">
+                <input type="text" name="year">
+			</div>
+			<div>
+                <input type="radio" name="options" value="GHG_Emissions"> GHG Emissions </input><br>
+			</div>
+			<div>
+                <input type="radio" name="options" value="Population"> Population </input><br>
+			</div>
+			<div>
+                <input type="radio" name="options" value="EVs"> Electric Vehicles </input><br>
+            </div>
+                <input type="submit" value="Submit">
+        </form>
+    </body>
+
+    <!-- minimal styling -->
+    <style>
+        form {
+            margin: 1%;
+        }
+
+        div {
+            margin: 1% 0;
+        }
+    </style>
+</html>
